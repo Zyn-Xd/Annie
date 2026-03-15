@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annie & Ola – 1 Year 💛</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Nunito:wght@400;600;700;900&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --yellow: #ffd93d;
+        --orange: #ff6b35;
+        --pink: #ff4d8d;
+        --mint: #00c9a7;
+        --blue: #4ecdc4;
+        --purple: #a855f7;
+        --cream: #fff9f0;
+        --dark: #1a1a2e;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Nunito", sans-serif;
+        background: var(--cream);
+        overflow-x: hidden;
+        cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctext y='20' font-size='20'%3E💛%3C/text%3E%3C/svg%3E"),
+          auto;
+      }
+
+      /* FLOATING BACKGROUND SHAPES */
+      .bg-shapes {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .bg-shape {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.08;
+        animation: floatShape 8s ease-in-out infinite;
+      }
+      .bg-shape:nth-child(1) {
+        width: 300px;
+        height: 300px;
+        background: var(--pink);
+        top: -100px;
+        left: -100px;
+        animation-delay: 0s;
+      }
+      .bg-shape:nth-child(2) {
+        width: 200px;
+        height: 200px;
+        background: var(--yellow);
+        top: 40%;
+        right: -60px;
+        animation-delay: 2s;
+      }
+      .bg-shape:nth-child(3) {
+        width: 250px;
+        height: 250px;
+        background: var(--mint);
+        bottom: -80px;
+        left: 30%;
+        animation-delay: 4s;
+      }
+      .bg-shape:nth-child(4) {
+        width: 150px;
+        height: 150px;
+        background: var(--purple);
+        top: 70%;
+        left: -40px;
+        animation-delay: 1s;
+      }
+
+      @keyframes floatShape {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-30px) rotate(10deg);
+        }
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 3px solid var(--yellow);
+        padding: 12px 24px;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav a {
+        font-family: "Boogaloo", cursive;
+        font-size: 1rem;
+        color: var(--dark);
+        text-decoration: none;
+        padding: 6px 14px;
+        border-radius: 50px;
+        border: 2px solid transparent;
+        transition: all 0.2s;
+      }
+      nav a:hover {
+        background: var(--yellow);
+        border-color: var(--orange);
+        transform: scale(1.05);
+      }
+
+      /* SECTIONS */
+      section {
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        padding: 100px 24px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* HERO */
+      #hero {
+        background: linear-gradient(
+          135deg,
+          #ffd93d 0%,
+          #ff6b35 40%,
+          #ff4d8d 100%
+        );
+        text-align: center;
+        overflow: hidden;
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-badge {
+        display: inline-block;
+        background: white;
+        color: var(--orange);
+        font-family: "Boogaloo", cursive;
+        font-size: 1rem;
+        padding: 6px 18px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+        animation: bounce 2s infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      .hero-title {
+        font-family: "Pacifico", cursive;
+        font-size: clamp(3rem, 10vw, 7rem);
+        color: white;
+        text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.15);
+        line-height: 1.1;
+        margin-bottom: 12px;
+        animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+      }
+      @keyframes popIn {
+        from {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .hero-sub {
+        font-family: "Boogaloo", cursive;
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 30px;
+        animation: popIn 0.8s 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+      }
+      .hero-emojis {
+        font-size: 2.5rem;
+        margin-bottom: 32px;
+        animation: popIn 0.8s 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+        letter-spacing: 8px;
+      }
+      .scroll-hint {
+        font-family: "Boogaloo", cursive;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+
+      /* FLOATING HEARTS */
+      .floating-hearts {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .fheart {
+        position: absolute;
+        font-size: 1.5rem;
+        opacity: 0;
+        animation: floatUp 4s ease-in infinite;
+      }
+      @keyframes floatUp {
+        0% {
+          transform: translateY(100%) rotate(0deg);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(-200px) rotate(20deg);
+          opacity: 0;
+        }
+      }
+
+      /* SECTION HEADERS */
+      .section-tag {
+        font-family: "Boogaloo", cursive;
+        font-size: 1rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 6px 18px;
+        border-radius: 50px;
+        margin-bottom: 12px;
+        display: inline-block;
+      }
+      .section-title {
+        font-family: "Pacifico", cursive;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      /* STATS */
+      #stats {
+        background: var(--dark);
+      }
+      #stats .section-tag {
+        background: var(--yellow);
+        color: var(--dark);
+      }
+      #stats .section-title {
+        color: white;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        width: 100%;
+        max-width: 900px;
+      }
+      .stat-card {
+        background: rgba(255, 255, 255, 0.07);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 28px 20px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+      .stat-card:hover {
+        transform: translateY(-8px) rotate(-1deg);
+      }
+      .stat-card .emoji {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+      .stat-card .num {
+        font-family: "Pacifico", cursive;
+        font-size: 2.2rem;
+        color: var(--yellow);
+        display: block;
+      }
+      .stat-card .label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+        margin-top: 4px;
+      }
+
+      /* COUNTDOWN */
+      #countdown {
+        background: linear-gradient(135deg, #a855f7, #ec4899);
+      }
+      #countdown .section-tag {
+        background: white;
+        color: var(--purple);
+      }
+      #countdown .section-title {
+        color: white;
+      }
+      .countdown-grid {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .cd-box {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        padding: 24px 28px;
+        text-align: center;
+        min-width: 100px;
+      }
+      .cd-num {
+        font-family: "Pacifico", cursive;
+        font-size: 3rem;
+        color: white;
+        display: block;
+      }
+      .cd-label {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      .countdown-msg {
+        margin-top: 24px;
+        color: white;
+        font-size: 1.1rem;
+        font-family: "Boogaloo", cursive;
+        font-size: 1.4rem;
+        opacity: 0.9;
+      }
+
+      /* MAP */
+      #map-section {
+        background: var(--cream);
+      }
+      #map-section .section-tag {
+        background: var(--mint);
+        color: white;
+      }
+      #map-section .section-title {
+        color: var(--dark);
+      }
+      .map-wrapper {
+        width: 100%;
+        max-width: 700px;
+        background: white;
+        border-radius: 24px;
+        border: 3px solid var(--mint);
+        overflow: hidden;
+        box-shadow: 8px 8px 0 var(--mint);
+      }
+      .map-svg-container {
+        width: 100%;
+        padding: 40px 30px;
+        background: #e8f8f5;
+        position: relative;
+      }
+      .map-cities {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+      }
+      .city-info {
+        text-align: center;
+      }
+      .city-name {
+        font-family: "Pacifico", cursive;
+        font-size: 1.4rem;
+        color: var(--dark);
+      }
+      .city-person {
+        font-size: 0.95rem;
+        color: #666;
+        margin-top: 4px;
+      }
+      .distance-badge {
+        background: var(--orange);
+        color: white;
+        font-family: "Boogaloo", cursive;
+        font-size: 1.1rem;
+        padding: 10px 24px;
+        border-radius: 50px;
+        margin: 0 auto;
+        display: inline-block;
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      /* TIMELINE */
+      #timeline {
+        background: var(--dark);
+      }
+      #timeline .section-tag {
+        background: var(--pink);
+        color: white;
+      }
+      #timeline .section-title {
+        color: white;
+      }
+      .timeline {
+        max-width: 700px;
+        width: 100%;
+        position: relative;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(
+          to bottom,
+          var(--yellow),
+          var(--pink),
+          var(--mint)
+        );
+        border-radius: 2px;
+      }
+      .tl-item {
+        display: flex;
+        margin-bottom: 48px;
+        align-items: flex-start;
+        gap: 20px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+      .tl-item.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .tl-item:nth-child(odd) {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+      .tl-dot {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        z-index: 2;
+        box-shadow: 0 0 0 4px var(--dark), 0 0 0 7px currentColor;
+      }
+      .tl-content {
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 16px;
+        padding: 18px 20px;
+        flex: 1;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.2s;
+      }
+      .tl-content:hover {
+        transform: scale(1.03);
+      }
+      .tl-date {
+        font-family: "Boogaloo", cursive;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .tl-title {
+        font-family: "Pacifico", cursive;
+        font-size: 1.2rem;
+        color: white;
+        margin-bottom: 6px;
+      }
+      .tl-desc {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      /* PHOTO GALLERY */
+      #gallery {
+        background: linear-gradient(135deg, #ffd93d 0%, #ff6b35 100%);
+      }
+      #gallery .section-tag {
+        background: white;
+        color: var(--orange);
+      }
+      #gallery .section-title {
+        color: white;
+      }
+      .gallery-note {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 14px 24px;
+        border-radius: 12px;
+        margin-bottom: 32px;
+        max-width: 500px;
+        text-align: center;
+        line-height: 1.6;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+        width: 100%;
+        max-width: 900px;
+      }
+      .gallery-card {
+        aspect-ratio: 1;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.25);
+        border: 3px dashed rgba(255, 255, 255, 0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .gallery-card:hover {
+        transform: rotate(-3deg) scale(1.05);
+        background: rgba(255, 255, 255, 0.35);
+      }
+      .gallery-card span {
+        font-family: "Boogaloo", cursive;
+        font-size: 0.85rem;
+        margin-top: 8px;
+        opacity: 0.9;
+      }
+      .gallery-card input[type="file"] {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .gallery-card img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 17px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      /* ENVELOPES */
+      #envelopes {
+        background: #fff0f5;
+      }
+      #envelopes .section-tag {
+        background: var(--pink);
+        color: white;
+      }
+      #envelopes .section-title {
+        color: var(--dark);
+      }
+      .envelopes-grid {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 700px;
+      }
+      .envelope-wrapper {
+        perspective: 800px;
+      }
+      .envelope {
+        width: 180px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .envelope:hover {
+        transform: translateY(-8px) rotate(-2deg);
+      }
+      .env-body {
+        background: white;
+        border-radius: 12px;
+        border: 3px solid;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .env-emoji {
+        font-size: 2.5rem;
+      }
+      .env-label {
+        font-family: "Boogaloo", cursive;
+        font-size: 1rem;
+      }
+      .env-flap {
+        width: 0;
+        height: 0;
+        border-left: 90px solid transparent;
+        border-right: 90px solid transparent;
+        border-top: 60px solid;
+        margin: -3px auto 0;
+        transition: transform 0.3s;
+      }
+      .envelope.opened .env-flap {
+        transform: rotateX(180deg);
+        transform-origin: top;
+      }
+      .env-message {
+        display: none;
+        padding: 16px;
+        background: #fffde7;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: var(--dark);
+        border: 2px dashed var(--yellow);
+        margin-top: 8px;
+        max-width: 300px;
+        text-align: center;
+        font-style: italic;
+        animation: popIn 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+      }
+
+      /* LOVE LETTER */
+      #letter {
+        background: linear-gradient(135deg, #ff4d8d, #ff6b35);
+      }
+      #letter .section-tag {
+        background: white;
+        color: var(--pink);
+      }
+      #letter .section-title {
+        color: white;
+      }
+      .letter-paper {
+        max-width: 620px;
+        width: 100%;
+        background: #fffef0;
+        border-radius: 4px;
+        padding: 50px 48px;
+        box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.2), -2px -2px 0 var(--yellow);
+        position: relative;
+        line-height: 2;
+        background-image: repeating-linear-gradient(
+          transparent,
+          transparent 31px,
+          #e8e8e8 31px,
+          #e8e8e8 32px
+        );
+      }
+      .letter-paper::before {
+        content: "";
+        position: absolute;
+        left: 60px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #ffb3c6;
+      }
+      .letter-greeting {
+        font-family: "Pacifico", cursive;
+        font-size: 1.5rem;
+        color: var(--pink);
+        margin-bottom: 20px;
+      }
+      .letter-body {
+        color: #333;
+        font-size: 1rem;
+        line-height: 2;
+        padding-left: 20px;
+      }
+      .letter-sign {
+        font-family: "Pacifico", cursive;
+        color: var(--orange);
+        margin-top: 24px;
+        font-size: 1.3rem;
+      }
+
+      /* QUIZ */
+      #quiz {
+        background: var(--dark);
+      }
+      #quiz .section-tag {
+        background: var(--mint);
+        color: var(--dark);
+      }
+      #quiz .section-title {
+        color: white;
+      }
+      .quiz-card {
+        max-width: 580px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 24px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        padding: 36px;
+        text-align: center;
+      }
+      .quiz-q-num {
+        font-family: "Boogaloo", cursive;
+        color: var(--mint);
+        font-size: 1rem;
+        margin-bottom: 8px;
+        letter-spacing: 2px;
+      }
+      .quiz-q {
+        font-family: "Pacifico", cursive;
+        color: white;
+        font-size: 1.4rem;
+        margin-bottom: 28px;
+        line-height: 1.4;
+      }
+      .quiz-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .quiz-opt {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 14px 16px;
+        border-radius: 14px;
+        cursor: pointer;
+        font-family: "Nunito", sans-serif;
+        font-weight: 700;
+        transition: all 0.2s;
+        font-size: 0.95rem;
+      }
+      .quiz-opt:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.03);
+      }
+      .quiz-opt.correct {
+        background: var(--mint);
+        border-color: var(--mint);
+        color: var(--dark);
+      }
+      .quiz-opt.wrong {
+        background: var(--pink);
+        border-color: var(--pink);
+      }
+      .quiz-result {
+        margin-top: 20px;
+        font-family: "Boogaloo", cursive;
+        font-size: 1.2rem;
+        color: var(--yellow);
+        min-height: 30px;
+      }
+      .quiz-progress {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+      .quiz-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .quiz-dot.done {
+        background: var(--mint);
+      }
+      .quiz-dot.current {
+        background: var(--yellow);
+      }
+      .quiz-score-screen {
+        display: none;
+      }
+      .score-emoji {
+        font-size: 4rem;
+        margin-bottom: 12px;
+      }
+      .score-num {
+        font-family: "Pacifico", cursive;
+        font-size: 3rem;
+        color: var(--yellow);
+      }
+      .score-msg {
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 12px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .btn-restart {
+        margin-top: 20px;
+        background: var(--yellow);
+        color: var(--dark);
+        border: none;
+        padding: 12px 32px;
+        border-radius: 50px;
+        font-family: "Boogaloo", cursive;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .btn-restart:hover {
+        transform: scale(1.05);
+      }
+
+      /* MUSIC */
+      #music {
+        background: linear-gradient(135deg, #4ecdc4, #a855f7);
+      }
+      #music .section-tag {
+        background: white;
+        color: var(--purple);
+      }
+      #music .section-title {
+        color: white;
+      }
+      .music-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 600px;
+      }
+      .music-track {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .music-track:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: scale(1.02);
+      }
+      .music-track.active {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: white;
+      }
+      .track-num {
+        font-family: "Pacifico", cursive;
+        font-size: 1.8rem;
+        color: white;
+        min-width: 36px;
+        text-align: center;
+      }
+      .track-info {
+        flex: 1;
+      }
+      .track-title {
+        font-family: "Boogaloo", cursive;
+        font-size: 1.2rem;
+        color: white;
+      }
+      .track-sub {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 2px;
+      }
+      .track-icon {
+        font-size: 1.5rem;
+      }
+      .spotify-embed-area {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 600px;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .spotify-embed-area iframe {
+        display: block;
+        width: 100%;
+      }
+
+      /* FOOTER */
+      footer {
+        background: var(--dark);
+        color: rgba(255, 255, 255, 0.6);
+        text-align: center;
+        padding: 40px 24px;
+        font-family: "Boogaloo", cursive;
+        font-size: 1.1rem;
+        position: relative;
+        z-index: 1;
+      }
+      footer .ft-heart {
+        color: var(--pink);
+        animation: pulse 1.5s infinite;
+        display: inline-block;
+      }
+      footer .ft-names {
+        font-family: "Pacifico", cursive;
+        color: var(--yellow);
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 600px) {
+        .timeline::before {
+          left: 20px;
+        }
+        .tl-item,
+        .tl-item:nth-child(odd) {
+          flex-direction: column;
+          text-align: left;
+        }
+        .quiz-options {
+          grid-template-columns: 1fr;
+        }
+        .letter-paper {
+          padding: 30px 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-shapes">
+      <div class="bg-shape"></div>
+      <div class="bg-shape"></div>
+      <div class="bg-shape"></div>
+      <div class="bg-shape"></div>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+      <a href="#hero">🏠 Home</a>
+      <a href="#stats">📊 Stats</a>
+      <a href="#countdown">⏳ Countdown</a>
+      <a href="#timeline">📅 Timeline</a>
+      <a href="#gallery">📸 Gallery</a>
+      <a href="#envelopes">💌 Surprises</a>
+      <a href="#letter">✉️ Letter</a>
+      <a href="#quiz">🎮 Quiz</a>
+      <a href="#music">🎵 Music</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="floating-hearts" id="floatingHearts"></div>
+      <div class="hero-inner">
+        <div class="hero-badge">🎉 1 YEAR ANNIVERSARY 🎉</div>
+        <h1 class="hero-title">Annie & Ola</h1>
+        <p class="hero-sub">One whole year of loving across the distance 💛</p>
+        <div class="hero-emojis">🌍 ✈️ 💛 📱 🥹</div>
+        <p class="scroll-hint">scroll down to celebrate ↓</p>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats">
+      <span class="section-tag">by the numbers</span>
+      <h2 class="section-title" style="color: white">
+        One Year, A Whole Lotta Love
+      </h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="emoji">📅</div>
+          <span class="num" id="daysStat">—</span>
+          <div class="label">Days Together</div>
+        </div>
+        <div class="stat-card">
+          <div class="emoji">🗺️</div>
+          <span class="num">128</span>
+          <div class="label">km Apart (Ibadan ↔ Lagos)</div>
+        </div>
+        <div class="stat-card">
+          <div class="emoji">📞</div>
+          <span class="num">365+</span>
+          <div class="label">Times You Made Each Other Smile</div>
+        </div>
+        <div class="stat-card">
+          <div class="emoji">💬</div>
+          <span class="num">∞</span>
+          <div class="label">Messages Sent with Love</div>
+        </div>
+        <div class="stat-card">
+          <div class="emoji">🥹</div>
+          <span class="num">100%</span>
+          <div class="label">Worth Every Mile</div>
+        </div>
+        <div class="stat-card">
+          <div class="emoji">💛</div>
+          <span class="num">1</span>
+          <div class="label">Person Made for You</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section id="countdown">
+      <span class="section-tag">next anniversary in</span>
+      <h2 class="section-title">Counting Down to Year 2 🥳</h2>
+      <div class="countdown-grid">
+        <div class="cd-box">
+          <span class="cd-num" id="cdDays">--</span>
+          <div class="cd-label">Days</div>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cdHours">--</span>
+          <div class="cd-label">Hours</div>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cdMins">--</span>
+          <div class="cd-label">Mins</div>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cdSecs">--</span>
+          <div class="cd-label">Secs</div>
+        </div>
+      </div>
+      <p class="countdown-msg" id="cdMsg">until March 17, 2026 🎂</p>
+    </section>
+
+    <!-- MAP -->
+    <section id="map-section">
+      <span class="section-tag">the distance</span>
+      <h2 class="section-title" style="color: var(--dark)">Ibadan 💛 Lagos</h2>
+      <div class="map-wrapper">
+        <div class="map-svg-container">
+          <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Road/path -->
+            <path
+              d="M 100 100 Q 300 30 500 100"
+              stroke="#00C9A7"
+              stroke-width="4"
+              fill="none"
+              stroke-dasharray="10,6"
+              opacity="0.6"
+            />
+            <!-- Animated pulse dot -->
+            <circle r="8" fill="var(--pink)" opacity="0.9">
+              <animateMotion dur="3s" repeatCount="indefinite">
+                <mpath href="#routePath" />
+              </animateMotion>
+            </circle>
+            <path id="routePath" d="M 100 100 Q 300 30 500 100" fill="none" />
+            <!-- City dots -->
+            <circle
+              cx="100"
+              cy="100"
+              r="18"
+              fill="var(--orange)"
+              opacity="0.9"
+            />
+            <text
+              x="100"
+              y="105"
+              text-anchor="middle"
+              fill="white"
+              font-size="14"
+              font-family="Nunito"
+            >
+              🏙️
+            </text>
+            <circle cx="500" cy="100" r="18" fill="var(--pink)" opacity="0.9" />
+            <text
+              x="500"
+              y="105"
+              text-anchor="middle"
+              fill="white"
+              font-size="14"
+              font-family="Nunito"
+            >
+              🌊
+            </text>
+            <!-- Labels -->
+            <text
+              x="100"
+              y="135"
+              text-anchor="middle"
+              fill="#333"
+              font-size="13"
+              font-family="Nunito"
+              font-weight="700"
+            >
+              Ibadan
+            </text>
+            <text
+              x="500"
+              y="135"
+              text-anchor="middle"
+              fill="#333"
+              font-size="13"
+              font-family="Nunito"
+              font-weight="700"
+            >
+              Lagos
+            </text>
+            <!-- Distance label -->
+            <text
+              x="300"
+              y="25"
+              text-anchor="middle"
+              fill="var(--mint)"
+              font-size="12"
+              font-family="Nunito"
+              font-weight="700"
+            >
+              ~128 km apart
+            </text>
+            <!-- heart midpoint -->
+            <text x="300" y="72" text-anchor="middle" font-size="18">💛</text>
+          </svg>
+        </div>
+        <div class="map-cities">
+          <div class="city-info">
+            <div class="city-name">Ibadan 🏙️</div>
+            <div class="city-person">Where Ola is 💛</div>
+          </div>
+          <div style="display: flex; align-items: center">
+            <span class="distance-badge">128 km of love</span>
+          </div>
+          <div class="city-info">
+            <div class="city-name">Lagos 🌊</div>
+            <div class="city-person">Where Annie is 💛</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline">
+      <span class="section-tag">our story</span>
+      <h2 class="section-title">How It All Started ✨</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div
+            class="tl-dot"
+            style="background: var(--yellow); color: var(--yellow)"
+          >
+            💬
+          </div>
+          <div class="tl-content">
+            <div class="tl-date" style="color: var(--yellow)">
+              March 17, 2024
+            </div>
+            <div class="tl-title">The Comment That Changed Everything</div>
+            <div class="tl-desc">
+              Annie comments "Hiiiiiiiiiiiiii" on Zusco's post. A simple hello
+              that started it all.
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div
+            class="tl-dot"
+            style="background: var(--mint); color: var(--mint)"
+          >
+            🤝
+          </div>
+          <div class="tl-content">
+            <div class="tl-date" style="color: var(--mint)">March 17, 2024</div>
+            <div class="tl-title">"Wanna be friends?"</div>
+            <div class="tl-desc">
+              The most important question ever asked. "Of course 😊" — and the
+              rest is history.
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div
+            class="tl-dot"
+            style="background: var(--pink); color: var(--pink)"
+          >
+            📞
+          </div>
+          <div class="tl-content">
+            <div class="tl-date" style="color: var(--pink)">Early 2024</div>
+            <div class="tl-title">The First Call</div>
+            <div class="tl-desc">
+              Hearing each other's voice for the first time. Probably talked for
+              way too long.
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div
+            class="tl-dot"
+            style="background: var(--orange); color: var(--orange)"
+          >
+            💛
+          </div>
+          <div class="tl-content">
+            <div class="tl-date" style="color: var(--orange)">2024</div>
+            <div class="tl-title">Friends to Something More</div>
+            <div class="tl-desc">
+              Late night calls, morning texts, and realizing this was something
+              really special.
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div
+            class="tl-dot"
+            style="background: var(--purple); color: var(--purple)"
+          >
+            🥹
+          </div>
+          <div class="tl-content">
+            <div class="tl-date" style="color: var(--purple)">
+              March 17, 2025
+            </div>
+            <div class="tl-title">One Whole Year 🎉</div>
+            <div class="tl-desc">
+              365 days of choosing each other, across every km between Ibadan
+              and Lagos.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <span class="section-tag">memories</span>
+      <h2 class="section-title">Our Photo Wall 📸</h2>
+      <p class="gallery-note">
+        📷 Images pre-loaded! Check browser console (F12) for load status. Hard
+        refresh Ctrl+F5. All folder images used.
+      </p>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Generated by JS -->
+      </div>
+    </section>
+
+    <!-- ENVELOPES -->
+    <section id="envelopes">
+      <span class="section-tag">little surprises</span>
+      <h2 class="section-title">Open Me 💌</h2>
+      <div class="envelopes-grid" id="envelopesGrid"></div>
+    </section>
+
+    <!-- LOVE LETTER -->
+    <section id="letter">
+      <span class="section-tag">from the heart</span>
+      <h2 class="section-title">A Letter for You ✉️</h2>
+      <div class="letter-paper">
+        <div class="letter-greeting">Dear Annie,</div>
+        <div class="letter-body">
+          I keep thinking about how it all started with a random "Hiiiiiiiiii"
+          in a comment section. Of all the posts, of all the comments — you were
+          there. You asked "Wanna be friends? 😆" and honestly, I don't think
+          <em>you</em> knew what you were signing up for 😄<br /><br />
+          This past year has been something I never expected. We're in different
+          cities, we've never been able to just <em>be there</em> the way some
+          people can — but somehow that hasn't mattered. You've been present in
+          every way that counts. Every call, every voice note, every 3am text
+          when one of us couldn't sleep.<br /><br />
+          You make the distance feel small. Not invisible — I won't lie, it's
+          hard sometimes — but small. Because you fill up all the space between
+          us with so much warmth that I barely notice the kilometres.<br /><br />
+          Thank you for choosing to stay. For choosing me, over and over. Here's
+          to year two, and every year after that — wherever we are in the world.
+          💛
+        </div>
+        <div class="letter-sign">Forever yours, Ola 🧡</div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz">
+      <span class="section-tag">how well do you know us?</span>
+      <h2 class="section-title">The Annie & Ola Quiz 🎮</h2>
+      <div class="quiz-card">
+        <div class="quiz-progress" id="quizProgress"></div>
+        <div id="quizMain">
+          <div class="quiz-q-num" id="qNum">QUESTION 1 OF 6</div>
+          <div class="quiz-q" id="qText">Loading...</div>
+          <div class="quiz-options" id="qOptions"></div>
+          <div class="quiz-result" id="qResult"></div>
+        </div>
+        <div class="quiz-score-screen" id="quizScore">
+          <div class="score-emoji" id="scoreEmoji">🎉</div>
+          <div class="score-num" id="scoreNum">0/6</div>
+          <div class="score-msg" id="scoreMsg"></div>
+          <button class="btn-restart" onclick="restartQuiz()">
+            Play Again 🔄
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MUSIC -->
+    <section id="music">
+      <span class="section-tag">our soundtrack</span>
+      <h2 class="section-title">Songs for Us 🎵</h2>
+      <div class="music-stack" id="trackList"></div>
+      <div class="spotify-embed-area" id="spotifyEmbed"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="ft-names">Annie & Ola 💛</span>
+      Made with <span class="ft-heart">♥</span> across 128 km · March 17, 2024 –
+      Forever
+    </footer>
+
+    <script>
+      // ── FLOATING HEARTS ──────────────────────────────────
+      const heartContainer = document.getElementById("floatingHearts");
+      const heartsArr = ["💛", "🧡", "💕", "✨", "💫", "🌸"];
+      for (let i = 0; i < 18; i++) {
+        const h = document.createElement("span");
+        h.className = "fheart";
+        h.textContent = heartsArr[Math.floor(Math.random() * heartsArr.length)];
+        h.style.left = Math.random() * 100 + "%";
+        h.style.bottom = "0";
+        h.style.animationDelay = Math.random() * 4 + "s";
+        h.style.animationDuration = 3 + Math.random() * 3 + "s";
+        h.style.fontSize = 1 + Math.random() + "rem";
+        heartContainer.appendChild(h);
+      }
+
+      // ── STATS: days since anniversary ────────────────────
+      const anniv = new Date("2024-03-17");
+      const now = new Date();
+      const days = Math.floor((now - anniv) / (1000 * 60 * 60 * 24));
+      document.getElementById("daysStat").textContent = days;
+
+      // ── COUNTDOWN to next anniversary ────────────────────
+      function updateCountdown() {
+        const next = new Date("2026-03-17T00:00:00");
+        const diff = next - new Date();
+        if (diff <= 0) {
+          document.getElementById("cdMsg").textContent =
+            "🎉 It's your anniversary!! Happy Year 2!! 🎉";
+          ["cdDays", "cdHours", "cdMins", "cdSecs"].forEach(
+            (id) => (document.getElementById(id).textContent = "00")
+          );
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById("cdDays").textContent = String(d).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("cdHours").textContent = String(h).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("cdMins").textContent = String(m).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("cdSecs").textContent = String(s).padStart(
+          2,
+          "0"
+        );
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // ── TIMELINE SCROLL REVEAL ────────────────────────────
+      const tlItems = document.querySelectorAll(".tl-item");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.2 }
+      );
+      tlItems.forEach((el) => obs.observe(el));
+
+      // ── GALLERY ───────────────────────────────────────────
+      const galleryGrid = document.getElementById("galleryGrid");
+      const galleryLabels = [
+        {
+          emoji: "😂",
+          label: "A funny memory",
+          image: "assets/Image/Snapchat-316097227.jpg",
+        },
+        {
+          emoji: "🌙",
+          label: "Late night vibes",
+          image: "assets/Image/IMG-20251226-WA0247.jpg",
+        },
+
+        {
+          emoji: "🥰",
+          label: "Just us",
+          image: "assets/Image/Snapchat-1744935665.jpg",
+        },
+        {
+          emoji: "🌟",
+          label: "Special moment",
+          image: "assets/Image/IMG-20260304-WA0029.jpg",
+        },
+      ];
+      galleryLabels.forEach((item, i) => {
+        const card = document.createElement("div");
+        card.className = "gallery-card";
+        let html = `<input type="file" accept="image/*" onchange="loadPhoto(event, this.parentElement)">`;
+        if (item.image) {
+          html += `<img src="${item.image}" alt="${item.label}" onload="console.log('Loaded: ${item.image}')" onerror="console.error('Failed to load: ${item.image}')">`;
+        } else {
+          html += `<span style="font-size:2.2rem">${item.emoji}</span>
+    <span>${item.label}</span>`;
+        }
+        card.innerHTML = html;
+        galleryGrid.appendChild(card);
+      });
+      function loadPhoto(e, card) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+          const img = document.createElement("img");
+          img.src = ev.target.result;
+          card.innerHTML = "";
+          card.appendChild(img);
+          // Re-add file input for re-upload
+          const newInput = document.createElement("input");
+          newInput.type = "file";
+          newInput.accept = "image/*";
+          newInput.onchange = (evt) => loadPhoto(evt, card);
+          newInput.style.cssText =
+            "position:absolute;inset:0;opacity:0;cursor:pointer;";
+          card.appendChild(newInput);
+        };
+        reader.readAsDataURL(file);
+      }
+
+      // ── ENVELOPES ─────────────────────────────────────────
+      const envelopesData = [
+        {
+          emoji: "💌",
+          label: "A Secret Message",
+          color: "var(--pink)",
+          msg: "You are the best decision I never planned. Thank you for existing in my timeline. 🥹",
+        },
+        {
+          emoji: "🌟",
+          label: "What I Love",
+          color: "var(--yellow)",
+          msg: "I love how you make ordinary moments feel like the best parts of my day. Keep being you. 💛",
+        },
+        {
+          emoji: "😂",
+          label: "Our Funniest Memory",
+          color: "var(--mint)",
+          msg: '"Wanna be friends 😆" — one question that changed everything forever! Still can\'t believe that worked 😂',
+        },
+        {
+          emoji: "🔮",
+          label: "Our Future",
+          color: "var(--purple)",
+          msg: "One day the distance won't matter anymore. Until then — I'll be right here, always. 🌸",
+        },
+      ];
+      const envGrid = document.getElementById("envelopesGrid");
+      envelopesData.forEach((env) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "envelope-wrapper";
+        wrapper.innerHTML = `
+    <div class="envelope" onclick="openEnvelope(this, '${env.msg.replace(
+      /'/g,
+      "&#39;"
+    )}')">
+      <div class="env-body" style="border-color:${env.color}">
+        <div class="env-emoji">${env.emoji}</div>
+        <div class="env-label" style="color:${env.color}">${env.label}</div>
+      </div>
+      <div class="env-flap" style="border-top-color:${env.color}"></div>
+    </div>
+    <div class="env-message" id="msg-${Math.random()
+      .toString(36)
+      .slice(2)}"></div>`;
+        envGrid.appendChild(wrapper);
+      });
+      function openEnvelope(el, msg) {
+        el.classList.toggle("opened");
+        const msgEl = el.parentElement.querySelector(".env-message");
+        if (el.classList.contains("opened")) {
+          msgEl.textContent = msg;
+          msgEl.style.display = "block";
+        } else {
+          msgEl.style.display = "none";
+        }
+      }
+
+      // ── QUIZ ──────────────────────────────────────────────
+      const questions = [
+        {
+          q: 'Where did Annie & Ola first "meet"?',
+          opts: ["Instagram", "TikTok", "Twitter/X", "WhatsApp"],
+          ans: 1,
+          fun: "Correct! A TikTok comment section love story 🎬",
+        },
+        {
+          q: "What did Annie type in that first comment?",
+          opts: ["Hey you 👀", "Hiiiiiiiiiiii", "lol hi", "omg hi"],
+          ans: 1,
+          fun: "Yes!! All those i's and it worked 😂💛",
+        },
+        {
+          q: "Which city is Ola in?",
+          opts: ["Abuja", "Benin", "Ibadan", "Port Harcourt"],
+          ans: 2,
+          fun: "Ibadan 🏙️ represent!",
+        },
+        {
+          q: "Which city is Annie in?",
+          opts: ["Lagos", "Abuja", "Enugu", "Kano"],
+          ans: 0,
+          fun: "Lagos gang 🌊✨",
+        },
+        {
+          q: "How far apart are they?",
+          opts: ["50 km", "128 km", "200 km", "300 km"],
+          ans: 1,
+          fun: "128 km of love and counting 💛",
+        },
+        {
+          q: "What did Ola say when Annie asked to be friends?",
+          opts: ["sure why not", "maybe lol", "of course 😊", "ok fine 😂"],
+          ans: 2,
+          fun: '"of course 😊" — the most important two words 🥹',
+        },
+      ];
+      let qIndex = 0,
+        score = 0,
+        answered = false;
+      function renderQuiz() {
+        const q = questions[qIndex];
+        document.getElementById("qNum").textContent = `QUESTION ${
+          qIndex + 1
+        } OF ${questions.length}`;
+        document.getElementById("qText").textContent = q.q;
+        const opts = document.getElementById("qOptions");
+        opts.innerHTML = "";
+        q.opts.forEach((o, i) => {
+          const btn = document.createElement("button");
+          btn.className = "quiz-opt";
+          btn.textContent = o;
+          btn.onclick = () => answer(i, btn);
+          opts.appendChild(btn);
+        });
+        document.getElementById("qResult").textContent = "";
+        answered = false;
+        renderProgress();
+      }
+      function answer(i, btn) {
+        if (answered) return;
+        answered = true;
+        const q = questions[qIndex];
+        const allBtns = document.querySelectorAll(".quiz-opt");
+        allBtns[q.ans].classList.add("correct");
+        if (i === q.ans) {
+          score++;
+          document.getElementById("qResult").textContent = "✅ " + q.fun;
+        } else {
+          btn.classList.add("wrong");
+          document.getElementById("qResult").textContent =
+            "❌ The correct answer is: " + q.opts[q.ans];
+        }
+        setTimeout(() => {
+          qIndex++;
+          if (qIndex < questions.length) renderQuiz();
+          else showScore();
+        }, 1800);
+      }
+      function renderProgress() {
+        const prog = document.getElementById("quizProgress");
+        prog.innerHTML = "";
+        questions.forEach((_, i) => {
+          const d = document.createElement("div");
+          d.className =
+            "quiz-dot" +
+            (i < qIndex ? " done" : i === qIndex ? " current" : "");
+          prog.appendChild(d);
+        });
+      }
+      function showScore() {
+        document.getElementById("quizMain").style.display = "none";
+        const scoreEl = document.getElementById("quizScore");
+        scoreEl.style.display = "block";
+        document.getElementById("scoreNum").textContent =
+          score + "/" + questions.length;
+        const emojis = ["😬", "😅", "🙂", "😊", "😄", "🥳", "🎉"];
+        document.getElementById("scoreEmoji").textContent = emojis[score];
+        const msgs = [
+          "Okay... maybe brush up on your Annie & Ola lore 😂",
+          "Not bad! You know the basics 🙂",
+          "Pretty good! You've been paying attention 💛",
+          "Wow you really know your stuff!! 🥹",
+          "PERFECT SCORE!! You're basically part of the relationship 🎉💛",
+        ];
+        document.getElementById("scoreMsg").textContent =
+          msgs[
+            Math.min(
+              Math.floor((score / questions.length) * 4),
+              msgs.length - 1
+            )
+          ];
+      }
+      function restartQuiz() {
+        qIndex = 0;
+        score = 0;
+        document.getElementById("quizMain").style.display = "block";
+        document.getElementById("quizScore").style.display = "none";
+        renderQuiz();
+      }
+      renderQuiz();
+
+      // ── MUSIC PLAYER ──────────────────────────────────────
+      const tracks = [
+        {
+          title: "Girl In Red",
+          sub: "Our Playlist 🎵",
+          src: "https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl?utm_source=generator",
+        },
+        {
+          title: "The Night We Met",
+          sub: "Our Playlist 🎵",
+          src: "https://open.spotify.com/embed/track/6qLshHZOHqWyAVRmSj4qip?utm_source=generator",
+        },
+        {
+          title: "Solace 2",
+          sub: "Our Playlist 🎵",
+          src: "https://open.spotify.com/embed/track/5yJaXWIErrrsjQ3J0eR5aK?utm_source=generator",
+        },
+      ];
+      let currentTrack = 0;
+      const trackList = document.getElementById("trackList");
+      const spotifyEmbed = document.getElementById("spotifyEmbed");
+
+      function renderTracks() {
+        trackList.innerHTML = "";
+        tracks.forEach((t, i) => {
+          const div = document.createElement("div");
+          div.className = "music-track" + (i === currentTrack ? " active" : "");
+          div.innerHTML = `<div class="track-num">${i + 1}</div>
+      <div class="track-info">
+        <div class="track-title">${t.title}</div>
+        <div class="track-sub">${t.sub}</div>
+      </div>
+      <div class="track-icon">${i === currentTrack ? "▶️" : "🎵"}</div>`;
+          div.onclick = () => {
+            currentTrack = i;
+            renderTracks();
+            loadEmbed();
+          };
+          trackList.appendChild(div);
+        });
+      }
+      function loadEmbed() {
+        spotifyEmbed.innerHTML = `<iframe style="border-radius:12px" src="${tracks[currentTrack].src}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+      }
+      renderTracks();
+      loadEmbed();
+    </script>
+  </body>
+</html>
